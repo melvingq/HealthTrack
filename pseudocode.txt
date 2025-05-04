@@ -1,0 +1,106 @@
+Start Program
+Initialize an empty dictionary called users
+Define function input_number(prompt):
+ Loop forever:
+ Try to input a number
+ If valid, return the number
+ If invalid, show "Invalid input" message
+Define function register():
+ Display "Registration"
+ Input username
+ If username already exists in users:
+ Show "Username already exists"
+ Return
+ Input password
+ Save username and password in users
+ Show "Registration Successful"
+Define function login():
+ Set attempts to 3
+ While attempts > 0:
+ Display "Log In"
+ Input username
+ Input password
+ If username and password match:
+ Show "Login Successful"
+ Return True
+ Else:
+ Decrease attempts by 1
+ Show "Invalid credentials, attempts left"
+ If attempts == 0:
+ Ask user "Do you want to register instead? (Y/N)"
+ If Yes:
+ Return None
+ Else:
+ Reset attempts to 3
+ Return False
+Define function input_data():
+ Input age
+ Loop until valid gender input (M/F):
+ Input gender
+ If gender is M or F, continue
+ Else, show "Invalid gender"
+ Input weight
+ Input height in cm
+ Convert height to meters
+ Calculate BMI = weight / (height * height)
+ Display BMI
+ If BMI < 18.5:
+ Display "Underweight advice"
+ Else if BMI between 18.5 and 24.9:
+ Display "Healthy weight advice"
+ Else if BMI between 25 and 29.9:
+ Display "Overweight advice"
+ Else:
+ Display "Obese advice"
+ Show user's age and gender
+Define function weight_loss_plan():
+ Display "Weight Loss Plan"
+ Call input_data()
+ Display weight loss tips
+Define function stay_healthy_plan():
+ Display "Stay Healthy Plan"
+ Call input_data()
+ Display healthy food and activity tips
+Define function gain_muscle_plan():
+ Display "Gain Muscle Plan"
+ Call input_data()
+ Display muscle gain tips
+Define function mental_wellness_plan():
+ Display "Mental Wellness Plan"
+ Call input_data()
+ Display mental health tips
+Define function energy_boost_plan():
+ Display "Energy Boost Plan"
+ Call input_data()
+ Display energy boosting tips
+Define function heart_health_plan():
+ Display "Heart Health Plan"
+ Call input_data()
+ Display heart health tips
+Define function core_strength_plan():
+ Display "Core Strength Plan"
+ Call input_data()
+ Display core strength tips
+Define function sleep_quality_plan():
+ Display "Sleep Quality Plan"
+ Call input_data()
+ Display sleep quality tips
+Define function run_app():
+ Display "Welcome to HealthTrack"
+ Loop forever:
+ Ask user if they have an account (1. Log in, 2. Register)
+ If 1:
+ Call login()
+ If login successful, break loop
+ If user chose to register after failed login, call register()
+ Else if 2:
+ Call register()
+ Else:
+ Show "Invalid option"
+ After login:
+ Display health goal options
+ Input goal selection
+ Based on selection, call the corresponding plan function
+ If invalid goal, show "Invalid selection"
+Call run_app()
+End Program
